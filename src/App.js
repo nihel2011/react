@@ -1,19 +1,26 @@
 import './App.css';
-import ComposantC from './components/ComposantC';
-import DataFetchAll from './components/DataFetchAll';
-import DataFetchAllContacts from './components/DataFetchAllContacts';
-import DataFetchFilm from './components/DataFetchFilm';
-import DataFetchTodos from './components/DataFetchTodos';
-import DataFetchingOne from './components/DataFetchingOne';
-import DatafetchReducer from './components/DatafetchReducer';
-import Formulaire from './components/Formulaire';
+import Admin from './components/Admin/Admin';
+import Dashboard from './components/Admin/Dashboard/Dashboard';
+import GestionPost from './components/Admin/GestionPost/GestionPost';
+// import ComposantC from './components/ComposantC';
+// import DataFetchAll from './components/DataFetchAll';
+// import DataFetchAllContacts from './components/DataFetchAllContacts';
+// import DataFetchFilm from './components/DataFetchFilm';
+// import DataFetchTodos from './components/DataFetchTodos';
+// import DataFetchingOne from './components/DataFetchingOne';
+// import DatafetchReducer from './components/DatafetchReducer';
+// import Formulaire from './components/Formulaire';
 import Home from './components/Home/Home';
-import Inline from './components/Inline';
-import NameList from './components/NameList';
-import Newsletter from './components/Newsletter';
+import Navbar from './components/Navbar/Navbar';
+import NotFound from './components/NotFound/NotFound';
+// import Inline from './components/Inline';
+// import NameList from './components/NameList';
+// import Newsletter from './components/Newsletter';
 import Profile from './components/Profile/Profile';
+import Developpement from './components/Services/Developpement/Developpement';
+import Marketing from './components/Services/Marketing/Marketing';
 import Services from './components/Services/Services';
-import Stylesheets from './components/Stylesheets';
+// import Stylesheets from './components/Stylesheets';
 // import AdminTest from './components/AdminTest';
 // import ClassClick from './components/ClassClick';
 // import Counter from './components/Counter';
@@ -22,9 +29,9 @@ import Stylesheets from './components/Stylesheets';
 // import Message from './components/Message';
 // import SuperHeros from './components/SuperHeros';
 // import UserGreetings from './components/UserGreetings';
-import Welcome from './components/Welcome';
+// import Welcome from './components/Welcome';
 
-import { UserProvider } from './components/userContext';
+// import { UserProvider } from './components/userContext';
 import { Routes, Route } from 'react-router-dom'
 
 function App() {
@@ -75,13 +82,26 @@ function App() {
       {/* <DataFetchTodos /> */}
       {/* <DatafetchReducer /> */}
 
+      {/* <Navbar />
+
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/services" element={<Services />} />
+        <Route path="/services" element={<Services />} >
+        <Route path="/services/developpement" element={<Developpement />} />
+        <Route path="/services/marketing" element={<Marketing />} />
+        </Route>
         <Route path="/profile/:id" element={<Profile />} />
-
+        <Route path="/*" element={<NotFound />} />
       </Routes>
+ */}
+ <Routes>
+ <Route path="/" element={<Home />} />
+        <Route path="/admin" element={<Admin />} >
+        <Route path="/admin/dashboard" element={<Dashboard />} />
+        <Route path="/admin/gestionpost" element={<GestionPost />} />
+        </Route>
 
+ </Routes>
 
     </div>
   );
