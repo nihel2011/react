@@ -11,6 +11,7 @@ import Home from './components/Home/Home';
 import Inline from './components/Inline';
 import NameList from './components/NameList';
 import Newsletter from './components/Newsletter';
+import Profile from './components/Profile/Profile';
 import Services from './components/Services/Services';
 import Stylesheets from './components/Stylesheets';
 // import AdminTest from './components/AdminTest';
@@ -77,6 +78,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/services" element={<Services />} />
+        <Route path="/profile/:id" element={<Profile />} />
+
       </Routes>
 
 
