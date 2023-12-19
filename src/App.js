@@ -2,6 +2,8 @@ import './App.css';
 import Admin from './components/Admin/Admin';
 import Dashboard from './components/Admin/Dashboard/Dashboard';
 import GestionPost from './components/Admin/GestionPost/GestionPost';
+import AllBlogs from './components/Blogs/AllBlogs/AllBlogs';
+import AllContacts from './components/Contacts/AllContacts/AllContacts';
 // import ComposantC from './components/ComposantC';
 // import DataFetchAll from './components/DataFetchAll';
 // import DataFetchAllContacts from './components/DataFetchAllContacts';
@@ -13,6 +15,8 @@ import GestionPost from './components/Admin/GestionPost/GestionPost';
 import Home from './components/Home/Home';
 import Navbar from './components/Navbar/Navbar';
 import NotFound from './components/NotFound/NotFound';
+import OneBlog from './components/Blogs/OneBlog/OneBlog';
+import OneContact from './components/Contacts/OneContact/OneContact';
 // import Inline from './components/Inline';
 // import NameList from './components/NameList';
 // import Newsletter from './components/Newsletter';
@@ -33,6 +37,9 @@ import Services from './components/Services/Services';
 
 // import { UserProvider } from './components/userContext';
 import { Routes, Route } from 'react-router-dom'
+import Blogs from './components/Blogs/Blogs';
+import Contacts from './components/Contacts/Contacts';
+import EditBlogs from './components/Blogs/EditBlogs';
 
 function App() {
   return (
@@ -82,27 +89,38 @@ function App() {
       {/* <DataFetchTodos /> */}
       {/* <DatafetchReducer /> */}
 
-      {/* <Navbar />
+      <Navbar />
 
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/services" element={<Services />} >
-        <Route path="/services/developpement" element={<Developpement />} />
-        <Route path="/services/marketing" element={<Marketing />} />
+          <Route path="/services/developpement" element={<Developpement />} />
+          <Route path="/services/marketing" element={<Marketing />} />
         </Route>
+        <Route path="/contact" element={<Contacts />} >
+          <Route path="/contact/allcontacts" element={<AllContacts />} />
+          <Route path="/contact/:id" element={<OneContact />} />
+        </Route>
+        <Route path="/blogs" element={<Blogs />} >
+          <Route path="/blogs/allblogs" element={<AllBlogs />} />
+          <Route path="/blogs/allblogs/:id" element={<OneBlog />} />
+          <Route path="/blogs/editblog/:id" element={<EditBlogs />} />
+        </Route>
+
+
         <Route path="/profile/:id" element={<Profile />} />
         <Route path="/*" element={<NotFound />} />
       </Routes>
- */}
+
  <Routes>
  <Route path="/" element={<Home />} />
         <Route path="/admin" element={<Admin />} >
         <Route path="/admin/dashboard" element={<Dashboard />} />
         <Route path="/admin/gestionpost" element={<GestionPost />} />
         </Route>
-
+        {/* <Route path="/allcontacts" element={<AllContacts />} /> */}
  </Routes>
-
+{/* <EditBlogs /> */}
     </div>
   );
 }
